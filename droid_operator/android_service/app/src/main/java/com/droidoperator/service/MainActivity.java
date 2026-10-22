@@ -19,6 +19,13 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Directly jump to VoiceActivity if accessibility service is connected
+        if (DroidAccessibilityService.INSTANCE != null) {
+            startActivity(new Intent(this, VoiceActivity.class));
+            finish();
+            return;
+        }
+
         // Simple programmatic layout - zero dependency
         android.widget.LinearLayout layout = new android.widget.LinearLayout(this);
         layout.setOrientation(android.widget.LinearLayout.VERTICAL);
