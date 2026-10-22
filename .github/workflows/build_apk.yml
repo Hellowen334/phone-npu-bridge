@@ -26,7 +26,7 @@ jobs:
         export ANDROID_HOME=/usr/local/lib/android/sdk
         echo "y" | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
         cd droid_operator
-        gradle assembleDebug --stacktrace
+        gradle assembleDebug --stacktrace --info
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
