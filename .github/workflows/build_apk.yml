@@ -43,10 +43,9 @@ jobs:
 
     - name: Release APK
       uses: softprops/action-gh-release@v2
-      if: success() && startsWith(github.ref, 'refs/heads/main')
       with:
-        tag_name: v1.0.0-droid
-        name: DroidOperator v1.0.0
+        tag_name: v1.0.1-droid
+        name: DroidOperator v1.0.1
         files: droid_operator/android_service/app/build/outputs/apk/debug/*.apk
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

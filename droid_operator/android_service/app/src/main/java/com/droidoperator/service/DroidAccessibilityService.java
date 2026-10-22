@@ -34,7 +34,7 @@ public class DroidAccessibilityService extends AccessibilityService {
             apiServer = new LocalApiServer(8765, this);
             apiServer.start();
             Log.i(TAG, "LocalApiServer started on port 8765");
-        } catch (IOException e) {
+        } catch (Exception e) {
             Log.e(TAG, "Failed to start LocalApiServer", e);
         }
     }
