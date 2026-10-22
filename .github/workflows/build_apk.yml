@@ -17,15 +17,20 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: gradle
+
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
 
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
       with:
         gradle-version: '8.5'
 
-    - name: Build Debug APK
-      run: cd droid_operator && gradle assembleDebug
+    - name: Generate Wrapper & Build Debug APK
+      run: |
+        cd droid_operator
+        gradle wrapper --gradle-version 8.5
+        ./gradlew assembleDebug --stacktrace
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
