@@ -17,7 +17,9 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
         }
     }
     compileOptions {
@@ -27,5 +29,5 @@ android {
 }
 
 dependencies {
-    // Zero external dependencies - pure Android framework APIs for maximum speed & stability
+    // Zero dependencies - pure Android Framework APIs
 }
