@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DroidOperator</string>
+    <string name="accessibility_service_description">DroidOperator yerel yapay zeka ajanı için otonom dokunma ve ekran okuma motoru.</string>
+</resources>
