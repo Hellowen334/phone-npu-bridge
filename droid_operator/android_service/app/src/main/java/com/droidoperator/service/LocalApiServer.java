@@ -119,6 +119,11 @@ public class LocalApiServer {
                     String action = json.getString("action");
                     boolean success = service.performGlobal(action);
                     responseBody = "{\"success\":" + success + "}";
+                } else if ("POST".equalsIgnoreCase(method) && "/command".equals(path)) {
+                    JSONObject json = new JSONObject(body.toString());
+                    String cmd = json.getString("command");
+                    service.executeAutonomousVoiceCommand(cmd);
+                    responseBody = "{\"success\":true,\"executed\":\"" + cmd + "\"}";
                 } else if ("GET".equalsIgnoreCase(method) && "/health".equals(path)) {
                     responseBody = "{\"status\":\"ok\",\"service\":\"DroidOperator\"}";
                 } else {

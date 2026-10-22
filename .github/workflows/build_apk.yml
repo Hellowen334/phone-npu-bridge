@@ -47,8 +47,8 @@ jobs:
       uses: softprops/action-gh-release@v2
       if: success()
       with:
-        tag_name: v1.0.5-droid
-        name: DroidOperator v1.0.5 (Autonomous Voice Action Engine)
+        tag_name: v1.0.6-droid
+        name: DroidOperator v1.0.6 (Full Voice & Local SLM Command API)
         files: droid_operator/android_service/app/build/outputs/apk/debug/*.apk
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
