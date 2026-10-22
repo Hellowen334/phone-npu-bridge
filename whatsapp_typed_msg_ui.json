@@ -1,0 +1,956 @@
+[
+  {
+    "index": 0,
+    "class": "android.widget.Button",
+    "text": "",
+    "desc": "Geri",
+    "id": "com.whatsapp:id/whatsapp_toolbar_home",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      0,
+      142,
+      180,
+      322
+    ],
+    "centerX": 90,
+    "centerY": 232
+  },
+  {
+    "index": 1,
+    "class": "android.widget.FrameLayout",
+    "text": "",
+    "desc": "",
+    "id": "com.whatsapp:id/contact_photo_view",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      180,
+      142,
+      360,
+      322
+    ],
+    "centerX": 270,
+    "centerY": 232
+  },
+  {
+    "index": 2,
+    "class": "android.widget.LinearLayout",
+    "text": "",
+    "desc": "",
+    "id": "com.whatsapp:id/conversation_contact",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      360,
+      127,
+      928,
+      337
+    ],
+    "centerX": 644,
+    "centerY": 232
+  },
+  {
+    "index": 3,
+    "class": "android.widget.TextView",
+    "text": "Orhan",
+    "desc": "",
+    "id": "com.whatsapp:id/conversation_contact_name",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      375,
+      185,
+      546,
+      271
+    ],
+    "centerX": 460,
+    "centerY": 228
+  },
+  {
+    "index": 4,
+    "class": "android.widget.ImageButton",
+    "text": "",
+    "desc": "Görüntülü arama",
+    "id": "",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      928,
+      142,
+      1108,
+      322
+    ],
+    "centerX": 1018,
+    "centerY": 232
+  },
+  {
+    "index": 5,
+    "class": "android.widget.ImageButton",
+    "text": "",
+    "desc": "Sesli arama",
+    "id": "",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1108,
+      142,
+      1288,
+      322
+    ],
+    "centerX": 1198,
+    "centerY": 232
+  },
+  {
+    "index": 6,
+    "class": "android.widget.ImageView",
+    "text": "",
+    "desc": "Diğer seçenekler",
+    "id": "com.whatsapp:id/menuitem_overflow",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1288,
+      142,
+      1440,
+      322
+    ],
+    "centerX": 1364,
+    "centerY": 232
+  },
+  {
+    "index": 7,
+    "class": "android.widget.TextView",
+    "text": "16845 yattı",
+    "desc": "",
+    "id": "com.whatsapp:id/message_text",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      796,
+      337,
+      1157,
+      359
+    ],
+    "centerX": 976,
+    "centerY": 348
+  },
+  {
+    "index": 8,
+    "class": "android.widget.TextView",
+    "text": "14:38",
+    "desc": "",
+    "id": "com.whatsapp:id/date",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1157,
+      337,
+      1268,
+      355
+    ],
+    "centerX": 1212,
+    "centerY": 346
+  },
+  {
+    "index": 9,
+    "class": "android.widget.ImageView",
+    "text": "",
+    "desc": "Teslim edildi",
+    "id": "com.whatsapp:id/status",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1268,
+      337,
+      1343,
+      347
+    ],
+    "centerX": 1305,
+    "centerY": 342
+  },
+  {
+    "index": 10,
+    "class": "android.widget.TextView",
+    "text": "Çok yattı sana",
+    "desc": "",
+    "id": "com.whatsapp:id/message_text",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      71,
+      412,
+      510,
+      520
+    ],
+    "centerX": 290,
+    "centerY": 466
+  },
+  {
+    "index": 11,
+    "class": "android.widget.TextView",
+    "text": "14:38",
+    "desc": "",
+    "id": "com.whatsapp:id/date",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      533,
+      459,
+      644,
+      520
+    ],
+    "centerX": 588,
+    "centerY": 489
+  },
+  {
+    "index": 12,
+    "class": "android.widget.TextView",
+    "text": "niye lo",
+    "desc": "",
+    "id": "com.whatsapp:id/message_text",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      925,
+      573,
+      1157,
+      681
+    ],
+    "centerX": 1041,
+    "centerY": 627
+  },
+  {
+    "index": 13,
+    "class": "android.widget.TextView",
+    "text": "14:41",
+    "desc": "",
+    "id": "com.whatsapp:id/date",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1157,
+      616,
+      1268,
+      677
+    ],
+    "centerX": 1212,
+    "centerY": 646
+  },
+  {
+    "index": 14,
+    "class": "android.widget.ImageView",
+    "text": "",
+    "desc": "Teslim edildi",
+    "id": "com.whatsapp:id/status",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1268,
+      624,
+      1343,
+      669
+    ],
+    "centerX": 1305,
+    "centerY": 646
+  },
+  {
+    "index": 15,
+    "class": "android.widget.TextView",
+    "text": "Bize yatmadi lavv",
+    "desc": "",
+    "id": "com.whatsapp:id/message_text",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      71,
+      734,
+      596,
+      842
+    ],
+    "centerX": 333,
+    "centerY": 788
+  },
+  {
+    "index": 16,
+    "class": "android.widget.TextView",
+    "text": "15:11",
+    "desc": "",
+    "id": "com.whatsapp:id/date",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      619,
+      781,
+      730,
+      842
+    ],
+    "centerX": 674,
+    "centerY": 811
+  },
+  {
+    "index": 17,
+    "class": "android.widget.TextView",
+    "text": "ne yapiyorsun",
+    "desc": "",
+    "id": "com.whatsapp:id/message_text",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      728,
+      895,
+      1157,
+      1003
+    ],
+    "centerX": 942,
+    "centerY": 949
+  },
+  {
+    "index": 18,
+    "class": "android.widget.TextView",
+    "text": "18:48",
+    "desc": "",
+    "id": "com.whatsapp:id/date",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1157,
+      938,
+      1268,
+      999
+    ],
+    "centerX": 1212,
+    "centerY": 968
+  },
+  {
+    "index": 19,
+    "class": "android.widget.ImageView",
+    "text": "",
+    "desc": "Teslim edildi",
+    "id": "com.whatsapp:id/status",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1268,
+      946,
+      1343,
+      991
+    ],
+    "centerX": 1305,
+    "centerY": 968
+  },
+  {
+    "index": 20,
+    "class": "android.widget.TextView",
+    "text": "Oturuyorum",
+    "desc": "",
+    "id": "com.whatsapp:id/message_text",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      71,
+      1056,
+      446,
+      1164
+    ],
+    "centerX": 258,
+    "centerY": 1110
+  },
+  {
+    "index": 21,
+    "class": "android.widget.TextView",
+    "text": "18:49",
+    "desc": "",
+    "id": "com.whatsapp:id/date",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      469,
+      1103,
+      580,
+      1164
+    ],
+    "centerX": 524,
+    "centerY": 1133
+  },
+  {
+    "index": 22,
+    "class": "android.widget.TextView",
+    "text": "Ne zaman geleceksin yemek yeriz",
+    "desc": "",
+    "id": "com.whatsapp:id/message_text",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      71,
+      1189,
+      1033,
+      1297
+    ],
+    "centerX": 552,
+    "centerY": 1243
+  },
+  {
+    "index": 23,
+    "class": "android.widget.TextView",
+    "text": "18:49",
+    "desc": "",
+    "id": "com.whatsapp:id/date",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1056,
+      1236,
+      1167,
+      1297
+    ],
+    "centerX": 1111,
+    "centerY": 1266
+  },
+  {
+    "index": 24,
+    "class": "android.widget.TextView",
+    "text": "va",
+    "desc": "",
+    "id": "com.whatsapp:id/message_text",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1035,
+      1350,
+      1157,
+      1458
+    ],
+    "centerX": 1096,
+    "centerY": 1404
+  },
+  {
+    "index": 25,
+    "class": "android.widget.TextView",
+    "text": "18:51",
+    "desc": "",
+    "id": "com.whatsapp:id/date",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1157,
+      1393,
+      1268,
+      1454
+    ],
+    "centerX": 1212,
+    "centerY": 1423
+  },
+  {
+    "index": 26,
+    "class": "android.widget.ImageView",
+    "text": "",
+    "desc": "Teslim edildi",
+    "id": "com.whatsapp:id/status",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1268,
+      1401,
+      1343,
+      1446
+    ],
+    "centerX": 1305,
+    "centerY": 1423
+  },
+  {
+    "index": 27,
+    "class": "android.widget.TextView",
+    "text": "yicen mi sen",
+    "desc": "",
+    "id": "com.whatsapp:id/message_text",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      764,
+      1483,
+      1157,
+      1591
+    ],
+    "centerX": 960,
+    "centerY": 1537
+  },
+  {
+    "index": 28,
+    "class": "android.widget.TextView",
+    "text": "18:52",
+    "desc": "",
+    "id": "com.whatsapp:id/date",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1157,
+      1526,
+      1268,
+      1587
+    ],
+    "centerX": 1212,
+    "centerY": 1556
+  },
+  {
+    "index": 29,
+    "class": "android.widget.ImageView",
+    "text": "",
+    "desc": "Teslim edildi",
+    "id": "com.whatsapp:id/status",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1268,
+      1534,
+      1343,
+      1579
+    ],
+    "centerX": 1305,
+    "centerY": 1556
+  },
+  {
+    "index": 30,
+    "class": "android.widget.TextView",
+    "text": "Heee",
+    "desc": "",
+    "id": "com.whatsapp:id/message_text",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      71,
+      1644,
+      270,
+      1752
+    ],
+    "centerX": 170,
+    "centerY": 1698
+  },
+  {
+    "index": 31,
+    "class": "android.widget.TextView",
+    "text": "18:52",
+    "desc": "",
+    "id": "com.whatsapp:id/date",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      293,
+      1691,
+      404,
+      1752
+    ],
+    "centerX": 348,
+    "centerY": 1721
+  },
+  {
+    "index": 32,
+    "class": "android.widget.TextView",
+    "text": "ne lazım",
+    "desc": "",
+    "id": "com.whatsapp:id/message_text",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      871,
+      1805,
+      1157,
+      1913
+    ],
+    "centerX": 1014,
+    "centerY": 1859
+  },
+  {
+    "index": 33,
+    "class": "android.widget.TextView",
+    "text": "18:52",
+    "desc": "",
+    "id": "com.whatsapp:id/date",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1157,
+      1848,
+      1268,
+      1909
+    ],
+    "centerX": 1212,
+    "centerY": 1878
+  },
+  {
+    "index": 34,
+    "class": "android.widget.ImageView",
+    "text": "",
+    "desc": "Teslim edildi",
+    "id": "com.whatsapp:id/status",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1268,
+      1856,
+      1343,
+      1901
+    ],
+    "centerX": 1305,
+    "centerY": 1878
+  },
+  {
+    "index": 35,
+    "class": "android.widget.TextView",
+    "text": "Ekmek",
+    "desc": "",
+    "id": "com.whatsapp:id/message_text",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      71,
+      1966,
+      310,
+      2074
+    ],
+    "centerX": 190,
+    "centerY": 2020
+  },
+  {
+    "index": 36,
+    "class": "android.widget.TextView",
+    "text": "18:53",
+    "desc": "",
+    "id": "com.whatsapp:id/date",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      333,
+      2013,
+      444,
+      2074
+    ],
+    "centerX": 388,
+    "centerY": 2043
+  },
+  {
+    "index": 37,
+    "class": "android.widget.TextView",
+    "text": "Gel diyince acaba Mardin'de mi geliyorsun onu merak ediyorum",
+    "desc": "",
+    "id": "com.whatsapp:id/message_text",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      71,
+      2099,
+      1219,
+      2278
+    ],
+    "centerX": 645,
+    "centerY": 2188
+  },
+  {
+    "index": 38,
+    "class": "android.widget.TextView",
+    "text": "19:31",
+    "desc": "",
+    "id": "com.whatsapp:id/date",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1085,
+      2217,
+      1196,
+      2278
+    ],
+    "centerX": 1140,
+    "centerY": 2247
+  },
+  {
+    "index": 39,
+    "class": "android.widget.TextView",
+    "text": "yo",
+    "desc": "",
+    "id": "com.whatsapp:id/message_text",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1035,
+      2331,
+      1157,
+      2439
+    ],
+    "centerX": 1096,
+    "centerY": 2385
+  },
+  {
+    "index": 40,
+    "class": "android.widget.TextView",
+    "text": "19:34",
+    "desc": "",
+    "id": "com.whatsapp:id/date",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1157,
+      2374,
+      1268,
+      2435
+    ],
+    "centerX": 1212,
+    "centerY": 2404
+  },
+  {
+    "index": 41,
+    "class": "android.widget.ImageView",
+    "text": "",
+    "desc": "Teslim edildi",
+    "id": "com.whatsapp:id/status",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1268,
+      2382,
+      1343,
+      2427
+    ],
+    "centerX": 1305,
+    "centerY": 2404
+  },
+  {
+    "index": 42,
+    "class": "android.widget.TextView",
+    "text": "kapıdayim",
+    "desc": "",
+    "id": "com.whatsapp:id/message_text",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      822,
+      2464,
+      1157,
+      2572
+    ],
+    "centerX": 989,
+    "centerY": 2518
+  },
+  {
+    "index": 43,
+    "class": "android.widget.TextView",
+    "text": "19:34",
+    "desc": "",
+    "id": "com.whatsapp:id/date",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1157,
+      2507,
+      1268,
+      2568
+    ],
+    "centerX": 1212,
+    "centerY": 2537
+  },
+  {
+    "index": 44,
+    "class": "android.widget.ImageView",
+    "text": "",
+    "desc": "Teslim edildi",
+    "id": "com.whatsapp:id/status",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1268,
+      2515,
+      1343,
+      2560
+    ],
+    "centerX": 1305,
+    "centerY": 2537
+  },
+  {
+    "index": 45,
+    "class": "android.widget.TextView",
+    "text": "aç",
+    "desc": "",
+    "id": "com.whatsapp:id/message_text",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1033,
+      2597,
+      1157,
+      2705
+    ],
+    "centerX": 1095,
+    "centerY": 2651
+  },
+  {
+    "index": 46,
+    "class": "android.widget.TextView",
+    "text": "19:34",
+    "desc": "",
+    "id": "com.whatsapp:id/date",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1157,
+      2640,
+      1268,
+      2701
+    ],
+    "centerX": 1212,
+    "centerY": 2670
+  },
+  {
+    "index": 47,
+    "class": "android.widget.ImageView",
+    "text": "",
+    "desc": "Teslim edildi",
+    "id": "com.whatsapp:id/status",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1268,
+      2648,
+      1343,
+      2693
+    ],
+    "centerX": 1305,
+    "centerY": 2670
+  },
+  {
+    "index": 48,
+    "class": "android.widget.LinearLayout",
+    "text": "",
+    "desc": "",
+    "id": "com.whatsapp:id/input_layout",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      30,
+      2744,
+      1195,
+      2925
+    ],
+    "centerX": 612,
+    "centerY": 2834
+  },
+  {
+    "index": 49,
+    "class": "android.widget.ImageButton",
+    "text": "",
+    "desc": "Emoji, GIF'ler ve çıkartmalar",
+    "id": "com.whatsapp:id/emoji_picker_btn",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      30,
+      2744,
+      210,
+      2924
+    ],
+    "centerX": 120,
+    "centerY": 2834
+  },
+  {
+    "index": 50,
+    "class": "android.widget.EditText",
+    "text": "ne yapıyorsun",
+    "desc": "",
+    "id": "com.whatsapp:id/entry",
+    "clickable": true,
+    "editable": true,
+    "checked": false,
+    "bounds": [
+      210,
+      2773,
+      1015,
+      2894
+    ],
+    "centerX": 612,
+    "centerY": 2833
+  },
+  {
+    "index": 51,
+    "class": "android.widget.ImageButton",
+    "text": "",
+    "desc": "Ekle",
+    "id": "com.whatsapp:id/input_attach_button",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1015,
+      2744,
+      1195,
+      2924
+    ],
+    "centerX": 1105,
+    "centerY": 2834
+  },
+  {
+    "index": 52,
+    "class": "android.widget.ImageButton",
+    "text": "",
+    "desc": "Gönder",
+    "id": "com.whatsapp:id/send",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1225,
+      2740,
+      1405,
+      2920
+    ],
+    "centerX": 1315,
+    "centerY": 2830
+  }
+]

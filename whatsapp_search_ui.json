@@ -1,0 +1,218 @@
+[
+  {
+    "index": 0,
+    "class": "android.widget.ImageButton",
+    "text": "",
+    "desc": "Geri",
+    "id": "com.whatsapp:id/wds_toolbar_nav_button",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      45,
+      127,
+      225,
+      307
+    ],
+    "centerX": 135,
+    "centerY": 217
+  },
+  {
+    "index": 1,
+    "class": "android.widget.EditText",
+    "text": "Meta AI'a Sor veya Ara",
+    "desc": "",
+    "id": "com.whatsapp:id/search_input",
+    "clickable": true,
+    "editable": true,
+    "checked": false,
+    "bounds": [
+      225,
+      157,
+      1395,
+      277
+    ],
+    "centerX": 810,
+    "centerY": 217
+  },
+  {
+    "index": 2,
+    "class": "android.widget.Button",
+    "text": "Okunmamış",
+    "desc": "",
+    "id": "com.whatsapp:id/search_unread_filter",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      45,
+      354,
+      514,
+      534
+    ],
+    "centerX": 279,
+    "centerY": 444
+  },
+  {
+    "index": 3,
+    "class": "android.widget.Button",
+    "text": "Fotoğraflar",
+    "desc": "",
+    "id": "com.whatsapp:id/search_media_filter_image",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      544,
+      354,
+      985,
+      534
+    ],
+    "centerX": 764,
+    "centerY": 444
+  },
+  {
+    "index": 4,
+    "class": "android.widget.Button",
+    "text": "Videolar",
+    "desc": "",
+    "id": "com.whatsapp:id/search_media_filter_video",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1015,
+      354,
+      1395,
+      534
+    ],
+    "centerX": 1205,
+    "centerY": 444
+  },
+  {
+    "index": 5,
+    "class": "android.widget.Button",
+    "text": "Bağlantılar",
+    "desc": "",
+    "id": "com.whatsapp:id/search_media_filter_link",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1425,
+      354,
+      1440,
+      534
+    ],
+    "centerX": 1432,
+    "centerY": 444
+  },
+  {
+    "index": 6,
+    "class": "android.widget.TextView",
+    "text": "En son aramalar",
+    "desc": "",
+    "id": "com.whatsapp:id/header_title",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      45,
+      557,
+      440,
+      651
+    ],
+    "centerX": 242,
+    "centerY": 604
+  },
+  {
+    "index": 7,
+    "class": "android.widget.FrameLayout",
+    "text": "",
+    "desc": "",
+    "id": "com.whatsapp:id/action_container",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      900,
+      557,
+      1395,
+      662
+    ],
+    "centerX": 1147,
+    "centerY": 609
+  },
+  {
+    "index": 8,
+    "class": "android.widget.TextView",
+    "text": "Tümünü temizle",
+    "desc": "",
+    "id": "com.whatsapp:id/header_action_text_view",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      945,
+      572,
+      1350,
+      647
+    ],
+    "centerX": 1147,
+    "centerY": 609
+  },
+  {
+    "index": 9,
+    "class": "android.widget.LinearLayout",
+    "text": "",
+    "desc": "Orhan",
+    "id": "com.whatsapp:id/recent_container",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      0,
+      685,
+      354,
+      1092
+    ],
+    "centerX": 177,
+    "centerY": 888
+  },
+  {
+    "index": 10,
+    "class": "android.widget.TextView",
+    "text": "Orhan",
+    "desc": "",
+    "id": "com.whatsapp:id/recent_contact_name",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      0,
+      971,
+      354,
+      1047
+    ],
+    "centerX": 177,
+    "centerY": 1009
+  },
+  {
+    "index": 11,
+    "class": "android.widget.ImageView",
+    "text": "",
+    "desc": "Orhan",
+    "id": "",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      49,
+      723,
+      304,
+      978
+    ],
+    "centerX": 176,
+    "centerY": 850
+  }
+]

@@ -1,0 +1,830 @@
+[
+  {
+    "index": 0,
+    "class": "androidx.appcompat.widget.LinearLayoutCompat",
+    "text": "",
+    "desc": "Meta AI'a Sor veya Ara",
+    "id": "com.whatsapp:id/search_bar_inner_layout",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      45,
+      352,
+      1395,
+      532
+    ],
+    "centerX": 720,
+    "centerY": 442
+  },
+  {
+    "index": 1,
+    "class": "android.widget.TextView",
+    "text": "Meta AI'a Sor veya Ara",
+    "desc": "",
+    "id": "com.whatsapp:id/search_text",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      255,
+      401,
+      1395,
+      482
+    ],
+    "centerX": 825,
+    "centerY": 441
+  },
+  {
+    "index": 2,
+    "class": "androidx.recyclerview.widget.RecyclerView",
+    "text": "",
+    "desc": "Diğer işlemleri görüntülemek için ekranı aşağı kaydırın",
+    "id": "android:id/list",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      0,
+      562,
+      1440,
+      2638
+    ],
+    "centerX": 720,
+    "centerY": 1600
+  },
+  {
+    "index": 3,
+    "class": "android.widget.FrameLayout",
+    "text": "",
+    "desc": "Inbox filters, Radio Group",
+    "id": "",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      0,
+      592,
+      1440,
+      802
+    ],
+    "centerX": 720,
+    "centerY": 697
+  },
+  {
+    "index": 4,
+    "class": "android.widget.RadioButton",
+    "text": "",
+    "desc": "‎Tümü filtresi, , seçildi",
+    "id": "com.whatsapp:id/conversations_filter_debug_view_id_all",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      60,
+      592,
+      284,
+      772
+    ],
+    "centerX": 172,
+    "centerY": 682
+  },
+  {
+    "index": 5,
+    "class": "android.widget.RadioButton",
+    "text": "",
+    "desc": "‎Okunmamış filtresi, , seçimi kaldırıldı",
+    "id": "com.whatsapp:id/conversations_filter_debug_view_id_unread",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      306,
+      592,
+      682,
+      772
+    ],
+    "centerX": 494,
+    "centerY": 682
+  },
+  {
+    "index": 6,
+    "class": "android.widget.RadioButton",
+    "text": "",
+    "desc": "‎Turizm filtresi, , seçimi kaldırıldı",
+    "id": "com.whatsapp:id/conversations_filter_debug_view_id_custom_list",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      704,
+      592,
+      959,
+      772
+    ],
+    "centerX": 831,
+    "centerY": 682
+  },
+  {
+    "index": 7,
+    "class": "android.widget.RadioButton",
+    "text": "",
+    "desc": "‎Gruplar filtresi, , seçimi kaldırıldı",
+    "id": "com.whatsapp:id/conversations_filter_debug_view_id_groups",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      981,
+      592,
+      1247,
+      772
+    ],
+    "centerX": 1114,
+    "centerY": 682
+  },
+  {
+    "index": 8,
+    "class": "android.widget.RadioButton",
+    "text": "",
+    "desc": "‎Favoriler filtresi, , seçimi kaldırıldı",
+    "id": "com.whatsapp:id/conversations_filter_debug_view_id_favorite",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1269,
+      592,
+      1440,
+      772
+    ],
+    "centerX": 1354,
+    "centerY": 682
+  },
+  {
+    "index": 9,
+    "class": "android.widget.Button",
+    "text": "",
+    "desc": "",
+    "id": "com.whatsapp:id/conversations_archive_header",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      0,
+      802,
+      1440,
+      982
+    ],
+    "centerX": 720,
+    "centerY": 892
+  },
+  {
+    "index": 10,
+    "class": "android.widget.TextView",
+    "text": "Arşivlenmiş",
+    "desc": "",
+    "id": "com.whatsapp:id/archived_row",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      270,
+      802,
+      593,
+      982
+    ],
+    "centerX": 431,
+    "centerY": 892
+  },
+  {
+    "index": 11,
+    "class": "android.widget.LinearLayout",
+    "text": "",
+    "desc": "",
+    "id": "com.whatsapp:id/contact_row_container",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      0,
+      982,
+      1440,
+      1267
+    ],
+    "centerX": 720,
+    "centerY": 1124
+  },
+  {
+    "index": 12,
+    "class": "android.widget.FrameLayout",
+    "text": "",
+    "desc": "",
+    "id": "com.whatsapp:id/contact_selector",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      0,
+      997,
+      270,
+      1252
+    ],
+    "centerX": 135,
+    "centerY": 1124
+  },
+  {
+    "index": 13,
+    "class": "android.widget.ImageView",
+    "text": "",
+    "desc": "‎Orhan resim",
+    "id": "com.whatsapp:id/contact_photo",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      37,
+      1027,
+      232,
+      1222
+    ],
+    "centerX": 134,
+    "centerY": 1124
+  },
+  {
+    "index": 14,
+    "class": "android.widget.TextView",
+    "text": "Orhan",
+    "desc": "",
+    "id": "com.whatsapp:id/conversations_row_contact_name",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      270,
+      1038,
+      433,
+      1119
+    ],
+    "centerX": 351,
+    "centerY": 1078
+  },
+  {
+    "index": 15,
+    "class": "android.widget.TextView",
+    "text": "19:34",
+    "desc": "19:34",
+    "id": "com.whatsapp:id/conversations_row_date",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1266,
+      1048,
+      1380,
+      1109
+    ],
+    "centerX": 1323,
+    "centerY": 1078
+  },
+  {
+    "index": 16,
+    "class": "android.widget.TextView",
+    "text": "aç",
+    "desc": "",
+    "id": "com.whatsapp:id/single_msg_tv",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      351,
+      1127,
+      436,
+      1211
+    ],
+    "centerX": 393,
+    "centerY": 1169
+  },
+  {
+    "index": 17,
+    "class": "android.widget.LinearLayout",
+    "text": "",
+    "desc": "",
+    "id": "com.whatsapp:id/contact_row_container",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      0,
+      1267,
+      1440,
+      1552
+    ],
+    "centerX": 720,
+    "centerY": 1409
+  },
+  {
+    "index": 18,
+    "class": "android.widget.FrameLayout",
+    "text": "",
+    "desc": "",
+    "id": "com.whatsapp:id/contact_selector",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      0,
+      1282,
+      270,
+      1537
+    ],
+    "centerX": 135,
+    "centerY": 1409
+  },
+  {
+    "index": 19,
+    "class": "android.widget.ImageView",
+    "text": "",
+    "desc": "‎Mahmut Yüksel resim",
+    "id": "com.whatsapp:id/contact_photo",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      37,
+      1312,
+      232,
+      1507
+    ],
+    "centerX": 134,
+    "centerY": 1409
+  },
+  {
+    "index": 20,
+    "class": "android.widget.TextView",
+    "text": "Mahmut Yüksel",
+    "desc": "",
+    "id": "com.whatsapp:id/conversations_row_contact_name",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      270,
+      1323,
+      694,
+      1404
+    ],
+    "centerX": 482,
+    "centerY": 1363
+  },
+  {
+    "index": 21,
+    "class": "android.widget.TextView",
+    "text": "Dün",
+    "desc": "Dün",
+    "id": "com.whatsapp:id/conversations_row_date",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1298,
+      1333,
+      1380,
+      1394
+    ],
+    "centerX": 1339,
+    "centerY": 1363
+  },
+  {
+    "index": 22,
+    "class": "android.widget.TextView",
+    "text": "he",
+    "desc": "",
+    "id": "com.whatsapp:id/single_msg_tv",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      351,
+      1412,
+      438,
+      1496
+    ],
+    "centerX": 394,
+    "centerY": 1454
+  },
+  {
+    "index": 23,
+    "class": "android.widget.LinearLayout",
+    "text": "",
+    "desc": "",
+    "id": "com.whatsapp:id/contact_row_container",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      0,
+      1552,
+      1440,
+      1837
+    ],
+    "centerX": 720,
+    "centerY": 1694
+  },
+  {
+    "index": 24,
+    "class": "android.widget.FrameLayout",
+    "text": "",
+    "desc": "",
+    "id": "com.whatsapp:id/contact_selector",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      0,
+      1567,
+      270,
+      1822
+    ],
+    "centerX": 135,
+    "centerY": 1694
+  },
+  {
+    "index": 25,
+    "class": "android.widget.ImageView",
+    "text": "",
+    "desc": "‎ULAN HAYAT resim",
+    "id": "com.whatsapp:id/contact_photo",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      37,
+      1597,
+      232,
+      1792
+    ],
+    "centerX": 134,
+    "centerY": 1694
+  },
+  {
+    "index": 26,
+    "class": "android.widget.TextView",
+    "text": "ULAN HAYAT",
+    "desc": "",
+    "id": "com.whatsapp:id/conversations_row_contact_name",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      270,
+      1608,
+      634,
+      1689
+    ],
+    "centerX": 452,
+    "centerY": 1648
+  },
+  {
+    "index": 27,
+    "class": "android.widget.TextView",
+    "text": "16.10.2026",
+    "desc": "16 Ekim 2026",
+    "id": "com.whatsapp:id/conversations_row_date",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1149,
+      1618,
+      1380,
+      1679
+    ],
+    "centerX": 1264,
+    "centerY": 1648
+  },
+  {
+    "index": 28,
+    "class": "android.widget.TextView",
+    "text": "Bilal: ",
+    "desc": "",
+    "id": "com.whatsapp:id/msg_from_tv",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      270,
+      1697,
+      409,
+      1781
+    ],
+    "centerX": 339,
+    "centerY": 1739
+  },
+  {
+    "index": 29,
+    "class": "android.widget.TextView",
+    "text": "https://www.facebook.com/share/r/1Dgth2eDYr/",
+    "desc": "",
+    "id": "com.whatsapp:id/single_msg_tv",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      409,
+      1697,
+      1380,
+      1781
+    ],
+    "centerX": 894,
+    "centerY": 1739
+  },
+  {
+    "index": 30,
+    "class": "android.widget.TextView",
+    "text": "Kişisel mesajlarınız uçtan uca şifrelidir",
+    "desc": "",
+    "id": "com.whatsapp:id/e2ee_main_text",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      367,
+      1899,
+      1134,
+      2079
+    ],
+    "centerX": 750,
+    "centerY": 1989
+  },
+  {
+    "index": 31,
+    "class": "android.view.View",
+    "text": "",
+    "desc": "uçtan uca şifrelidir",
+    "id": "",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      760,
+      1962,
+      1133,
+      2015
+    ],
+    "centerX": 946,
+    "centerY": 1988
+  },
+  {
+    "index": 32,
+    "class": "android.widget.LinearLayout",
+    "text": "",
+    "desc": "WhatsApp",
+    "id": "",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      60,
+      127,
+      810,
+      337
+    ],
+    "centerX": 435,
+    "centerY": 232
+  },
+  {
+    "index": 33,
+    "class": "android.widget.ImageButton",
+    "text": "",
+    "desc": "Kamera",
+    "id": "com.whatsapp:id/menuitem_camera",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1108,
+      142,
+      1288,
+      322
+    ],
+    "centerX": 1198,
+    "centerY": 232
+  },
+  {
+    "index": 34,
+    "class": "android.widget.ImageView",
+    "text": "",
+    "desc": "Diğer seçenekler",
+    "id": "com.whatsapp:id/menuitem_overflow",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1288,
+      142,
+      1440,
+      322
+    ],
+    "centerX": 1364,
+    "centerY": 232
+  },
+  {
+    "index": 35,
+    "class": "android.widget.LinearLayout",
+    "text": "",
+    "desc": "Asistanınıza mesaj gönderin",
+    "id": "com.whatsapp:id/extended_mini_fab",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      858,
+      2143,
+      1350,
+      2293
+    ],
+    "centerX": 1104,
+    "centerY": 2218
+  },
+  {
+    "index": 36,
+    "class": "android.widget.TextView",
+    "text": "Meta AI'a sor",
+    "desc": "",
+    "id": "com.whatsapp:id/extended_mini_fab_text",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1002,
+      2182,
+      1312,
+      2253
+    ],
+    "centerX": 1157,
+    "centerY": 2217
+  },
+  {
+    "index": 37,
+    "class": "android.widget.ImageButton",
+    "text": "",
+    "desc": "Yeni sohbet",
+    "id": "com.whatsapp:id/fab",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1170,
+      2368,
+      1380,
+      2578
+    ],
+    "centerX": 1275,
+    "centerY": 2473
+  },
+  {
+    "index": 38,
+    "class": "android.widget.FrameLayout",
+    "text": "",
+    "desc": "Sohbetler",
+    "id": "",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      0,
+      2640,
+      360,
+      2940
+    ],
+    "centerX": 180,
+    "centerY": 2790
+  },
+  {
+    "index": 39,
+    "class": "android.widget.TextView",
+    "text": "Sohbetler",
+    "desc": "",
+    "id": "com.whatsapp:id/navigation_bar_item_large_label_view",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      61,
+      2824,
+      298,
+      2895
+    ],
+    "centerX": 179,
+    "centerY": 2859
+  },
+  {
+    "index": 40,
+    "class": "android.widget.FrameLayout",
+    "text": "",
+    "desc": "Güncellemeler",
+    "id": "",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      360,
+      2640,
+      720,
+      2940
+    ],
+    "centerX": 540,
+    "centerY": 2790
+  },
+  {
+    "index": 41,
+    "class": "android.widget.TextView",
+    "text": "Güncellemeler",
+    "desc": "",
+    "id": "com.whatsapp:id/navigation_bar_item_small_label_view",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      366,
+      2824,
+      713,
+      2895
+    ],
+    "centerX": 539,
+    "centerY": 2859
+  },
+  {
+    "index": 42,
+    "class": "android.widget.FrameLayout",
+    "text": "",
+    "desc": "Topluluklar",
+    "id": "",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      720,
+      2640,
+      1080,
+      2940
+    ],
+    "centerX": 900,
+    "centerY": 2790
+  },
+  {
+    "index": 43,
+    "class": "android.widget.TextView",
+    "text": "Topluluklar",
+    "desc": "",
+    "id": "com.whatsapp:id/navigation_bar_item_small_label_view",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      765,
+      2824,
+      1034,
+      2895
+    ],
+    "centerX": 899,
+    "centerY": 2859
+  },
+  {
+    "index": 44,
+    "class": "android.widget.FrameLayout",
+    "text": "",
+    "desc": "Aramalar",
+    "id": "",
+    "clickable": true,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1080,
+      2640,
+      1440,
+      2940
+    ],
+    "centerX": 1260,
+    "centerY": 2790
+  },
+  {
+    "index": 45,
+    "class": "android.widget.TextView",
+    "text": "Aramalar",
+    "desc": "",
+    "id": "com.whatsapp:id/navigation_bar_item_small_label_view",
+    "clickable": false,
+    "editable": false,
+    "checked": false,
+    "bounds": [
+      1149,
+      2824,
+      1371,
+      2895
+    ],
+    "centerX": 1260,
+    "centerY": 2859
+  }
+]

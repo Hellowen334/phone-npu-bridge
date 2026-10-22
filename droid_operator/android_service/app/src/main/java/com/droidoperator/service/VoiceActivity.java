@@ -2,14 +2,12 @@ package com.droidoperator.service;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
-import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -19,17 +17,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class VoiceActivity extends Activity {
 
     private static final String TAG = "DroidVoiceActivity";
     private SpeechRecognizer speechRecognizer;
-    private TextToSpeech tts;
     private TextView statusTextView;
     private TextView recognizedTextView;
     private ProgressBar progressBar;
@@ -38,42 +31,45 @@ public class VoiceActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Build a sleek, modern Siri/Gemini style translucent bottom card UI
+        // Modern Siri / Gemini floating translucent card
         LinearLayout root = new LinearLayout(this);
         root.setOrientation(LinearLayout.VERTICAL);
         root.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL);
         root.setBackgroundColor(Color.TRANSPARENT);
 
+        // Tap background to dismiss
+        root.setOnClickListener(v -> finish());
+
         LinearLayout card = new LinearLayout(this);
         card.setOrientation(LinearLayout.VERTICAL);
         card.setGravity(Gravity.CENTER_HORIZONTAL);
-        card.setPadding(60, 60, 60, 80);
+        card.setPadding(60, 50, 60, 80);
 
         GradientDrawable bg = new GradientDrawable();
-        bg.setColor(Color.parseColor("#EE1A1C23")); // Deep dark modern translucent
+        bg.setColor(Color.parseColor("#F012141C")); // Sleek AMOLED dark
         bg.setCornerRadii(new float[]{60, 60, 60, 60, 0, 0, 0, 0});
         card.setBackground(bg);
 
         statusTextView = new TextView(this);
         statusTextView.setText("Dinliyorum...");
-        statusTextView.setTextColor(Color.parseColor("#4DEEEA"));
-        statusTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+        statusTextView.setTextColor(Color.parseColor("#00E5FF")); // Cyan glow
+        statusTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 17);
         statusTextView.setGravity(Gravity.CENTER);
-        statusTextView.setPadding(0, 0, 0, 20);
+        statusTextView.setPadding(0, 0, 0, 15);
         card.addView(statusTextView);
 
         progressBar = new ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal);
         progressBar.setIndeterminate(true);
         progressBar.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT, 20));
+                LinearLayout.LayoutParams.MATCH_PARENT, 16));
         card.addView(progressBar);
 
         recognizedTextView = new TextView(this);
         recognizedTextView.setText("");
         recognizedTextView.setTextColor(Color.WHITE);
-        recognizedTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+        recognizedTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 19);
         recognizedTextView.setGravity(Gravity.CENTER);
-        recognizedTextView.setPadding(0, 30, 0, 10);
+        recognizedTextView.setPadding(0, 25, 0, 10);
         card.addView(recognizedTextView);
 
         root.addView(card, new LinearLayout.LayoutParams(
@@ -82,20 +78,13 @@ public class VoiceActivity extends Activity {
 
         setContentView(root);
 
-        // Initialize Text-To-Speech
-        tts = new TextToSpeech(this, status -> {
-            if (status == TextToSpeech.SUCCESS) {
-                tts.setLanguage(new Locale("tr", "TR"));
-            }
-        });
-
-        // Initialize Speech Recognizer
         startListeningImmediately();
     }
 
     private void startListeningImmediately() {
         if (!SpeechRecognizer.isRecognitionAvailable(this)) {
             statusTextView.setText("Ses tanıma servisi bulunamadı");
+            statusTextView.postDelayed(this::finish, 2000);
             return;
         }
 
@@ -130,8 +119,9 @@ public class VoiceActivity extends Activity {
 
             @Override
             public void onError(int error) {
-                statusTextView.setText("Ses anlaşılamadı (Hata: " + error + ")");
-                rootFinishDelay(2000);
+                Log.w(TAG, "SpeechRecognizer error: " + error);
+                statusTextView.setText("Ses anlaşılamadı");
+                statusTextView.postDelayed(VoiceActivity.this::finish, 1500);
             }
 
             @Override
@@ -139,11 +129,21 @@ public class VoiceActivity extends Activity {
                 ArrayList<String> matches = results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
                 if (matches != null && !matches.isEmpty()) {
                     String query = matches.get(0);
+                    Log.i(TAG, "Recognized user command: " + query);
                     recognizedTextView.setText("\"" + query + "\"");
-                    executeAutonomousCommand(query);
+                    statusTextView.setText("Yürütülüyor...");
+
+                    if (DroidAccessibilityService.INSTANCE != null) {
+                        DroidAccessibilityService.INSTANCE.executeAutonomousVoiceCommand(query);
+                    } else {
+                        Toast.makeText(VoiceActivity.this, "Erişilebilirlik servisi aktif değil", Toast.LENGTH_SHORT).show();
+                    }
+
+                    // Dismiss immediately so underlying screen is accessible and visible
+                    statusTextView.postDelayed(VoiceActivity.this::finish, 350);
                 } else {
                     statusTextView.setText("Komut alınamadı");
-                    rootFinishDelay(1500);
+                    statusTextView.postDelayed(VoiceActivity.this::finish, 1200);
                 }
             }
 
@@ -157,183 +157,12 @@ public class VoiceActivity extends Activity {
         speechRecognizer.startListening(intent);
     }
 
-    /**
-     * Autonomous Agent Decision Pipeline
-     */
-    private void executeAutonomousCommand(String query) {
-        String lower = query.toLowerCase(Locale.forLanguageTag("tr-TR")).trim();
-        statusTextView.setText("Eylem yürütülüyor...");
-
-        new Thread(() -> {
-            try {
-                DroidAccessibilityService service = DroidAccessibilityService.INSTANCE;
-
-                // 1. WhatsApp Intent & Automation
-                if (lower.contains("whatsapp") || lower.contains("mesaj")) {
-                    speak("WhatsApp açılıyor...");
-                    handleWhatsAppCommand(lower);
-                    return;
-                }
-
-                // 2. Navigation Commands
-                if (lower.equals("ana ekran") || lower.equals("ana ekrana dön") || lower.equals("ev")) {
-                    if (service != null) service.performGlobal("home");
-                    speak("Ana ekrana dönüldü");
-                    rootFinishDelay(1000);
-                    return;
-                }
-
-                if (lower.equals("geri") || lower.equals("geri dön")) {
-                    if (service != null) service.performGlobal("back");
-                    rootFinishDelay(1000);
-                    return;
-                }
-
-                if (lower.contains("bildirim") || lower.contains("bildirimleri aç")) {
-                    if (service != null) service.performGlobal("notifications");
-                    rootFinishDelay(1000);
-                    return;
-                }
-
-                // 3. General App Launcher ("... uygulamasını aç")
-                if (lower.startsWith("aç ") || lower.endsWith(" aç") || lower.endsWith(" başlat")) {
-                    String appName = lower.replace("aç", "").replace("başlat", "").replace("uygulamasını", "").trim();
-                    launchAppByName(appName);
-                    return;
-                }
-
-                // 4. Default Agent Flow: Search on-screen element and click
-                if (service != null) {
-                    String uiJson = service.dumpUiJson();
-                    JSONArray array = new JSONArray(uiJson);
-                    boolean clicked = false;
-                    for (int i = 0; i < array.length(); i++) {
-                        JSONObject obj = array.getJSONObject(i);
-                        String text = obj.optString("text", "").toLowerCase(Locale.forLanguageTag("tr-TR"));
-                        String desc = obj.optString("desc", "").toLowerCase(Locale.forLanguageTag("tr-TR"));
-
-                        if ((text.length() > 2 && lower.contains(text)) || (desc.length() > 2 && lower.contains(desc))) {
-                            int cx = obj.getInt("centerX");
-                            int cy = obj.getInt("centerY");
-                            service.click(cx, cy);
-                            speak(text + " tıklandı");
-                            clicked = true;
-                            break;
-                        }
-                    }
-
-                    if (!clicked) {
-                        speak("Ekran incelendi, ilgili öğe bulunamadı.");
-                    }
-                }
-
-                rootFinishDelay(2000);
-
-            } catch (Exception e) {
-                Log.e(TAG, "Command execution error", e);
-                rootFinishDelay(1500);
-            }
-        }).start();
-    }
-
-    private void handleWhatsAppCommand(String lower) {
-        // e.g. "whatsapptan orhana ne yapıyorsun yaz"
-        String targetContact = "";
-        String messageText = "";
-
-        // Extract contact and message
-        String[] words = lower.split("\\s+");
-        for (int i = 0; i < words.length; i++) {
-            if (words[i].contains("orhan")) {
-                targetContact = "Orhan";
-            }
-        }
-
-        if (targetContact.isEmpty() && words.length > 1) {
-            targetContact = words[1]; // fallback second word
-        }
-
-        // Launch WhatsApp
-        PackageManager pm = getPackageManager();
-        Intent launchIntent = pm.getLaunchIntentForPackage("com.whatsapp");
-        if (launchIntent != null) {
-            startActivity(launchIntent);
-        }
-
-        speak(targetContact + " bulunuyor...");
-
-        final String finalContact = targetContact;
-
-        // Autonomous steps via Accessibility Service
-        new Thread(() -> {
-            try {
-                Thread.sleep(1500);
-                DroidAccessibilityService service = DroidAccessibilityService.INSTANCE;
-                if (service != null) {
-                    // Tap search bar (center X=720, Y=442)
-                    service.click(720, 442);
-                    Thread.sleep(800);
-
-                    // Type contact
-                    service.typeText(finalContact);
-                    Thread.sleep(1200);
-
-                    // Click first result card (around Y=576)
-                    service.click(351, 576);
-                    Thread.sleep(1000);
-
-                    // If message exists, type it
-                    // service.typeText("Selam");
-                    speak("Sohbet açıldı.");
-                }
-                rootFinishDelay(500);
-            } catch (Exception e) {
-                Log.e(TAG, "WhatsApp automation error", e);
-            }
-        }).start();
-    }
-
-    private void launchAppByName(String appName) {
-        speak(appName + " açılıyor...");
-        PackageManager pm = getPackageManager();
-        for (android.content.pm.ApplicationInfo app : pm.getInstalledApplications(0)) {
-            String label = pm.getApplicationLabel(app).toString().toLowerCase(Locale.forLanguageTag("tr-TR"));
-            if (label.contains(appName)) {
-                Intent intent = pm.getLaunchIntentForPackage(app.packageName);
-                if (intent != null) {
-                    startActivity(intent);
-                    rootFinishDelay(1000);
-                    return;
-                }
-            }
-        }
-        speak("Uygulama bulunamadı");
-        rootFinishDelay(1500);
-    }
-
-    private void speak(String text) {
-        if (tts != null) {
-            tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "tts_id");
-        }
-    }
-
-    private void rootFinishDelay(long ms) {
-        runOnUiThread(() -> {
-            statusTextView.postDelayed(this::finish, ms);
-        });
-    }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
         if (speechRecognizer != null) {
             speechRecognizer.destroy();
             speechRecognizer = null;
-        }
-        if (tts != null) {
-            tts.stop();
-            tts.shutdown();
-            tts = null;
         }
     }
 }
