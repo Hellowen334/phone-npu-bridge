@@ -262,6 +262,8 @@ public class VoiceActivity extends Activity {
 
         speak(targetContact + " bulunuyor...");
 
+        final String finalContact = targetContact;
+
         // Autonomous steps via Accessibility Service
         new Thread(() -> {
             try {
@@ -273,7 +275,7 @@ public class VoiceActivity extends Activity {
                     Thread.sleep(800);
 
                     // Type contact
-                    service.typeText(targetContact);
+                    service.typeText(finalContact);
                     Thread.sleep(1200);
 
                     // Click first result card (around Y=576)

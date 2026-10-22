@@ -23,6 +23,7 @@ jobs:
 
     - name: Install Gradle & Build APK
       run: |
+        set -e
         wget -q https://services.gradle.org/distributions/gradle-8.5-bin.zip
         unzip -q gradle-8.5-bin.zip
         export PATH=$PWD/gradle-8.5/bin:$PATH
@@ -30,6 +31,7 @@ jobs:
         echo "y" | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
         cd droid_operator
         gradle assembleDebug --stacktrace 2>&1 | tee ../build.log
+        ls -la android_service/app/build/outputs/apk/debug/
 
     - name: Commit Build Log
       if: always()
@@ -43,9 +45,10 @@ jobs:
 
     - name: Release APK
       uses: softprops/action-gh-release@v2
+      if: success()
       with:
-        tag_name: v1.0.2-droid
-        name: DroidOperator v1.0.2
+        tag_name: v1.0.3-droid
+        name: DroidOperator v1.0.3 (Voice AI Edition)
         files: droid_operator/android_service/app/build/outputs/apk/debug/*.apk
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
