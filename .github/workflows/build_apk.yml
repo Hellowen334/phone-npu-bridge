@@ -5,6 +5,9 @@ on:
     branches: [ "main", "master" ]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,14 +29,14 @@ jobs:
         export ANDROID_HOME=/usr/local/lib/android/sdk
         echo "y" | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
         cd droid_operator
-        gradle assembleDebug --stacktrace 2>&1 | tee ../build.log
-        echo "### Build Log" >> $GITHUB_STEP_SUMMARY
-        echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
-        tail -n 100 ../build.log >> $GITHUB_STEP_SUMMARY
-        echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+        gradle assembleDebug --stacktrace
 
-    - name: Upload APK Artifact
-      uses: actions/upload-artifact@v4
+    - name: Release APK
+      uses: softprops/action-gh-release@v2
+      if: startsWith(github.ref, 'refs/heads/main')
       with:
-        name: DroidOperator-Debug-APK
-        path: droid_operator/android_service/app/build/outputs/apk/debug/*.apk
+        tag_name: v1.0.0-droid
+        name: DroidOperator v1.0.0
+        files: droid_operator/android_service/app/build/outputs/apk/debug/*.apk
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
