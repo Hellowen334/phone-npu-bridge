@@ -29,11 +29,21 @@ jobs:
         export ANDROID_HOME=/usr/local/lib/android/sdk
         echo "y" | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
         cd droid_operator
-        gradle assembleDebug --stacktrace
+        gradle assembleDebug --stacktrace 2>&1 | tee ../build.log
+
+    - name: Commit Build Log
+      if: always()
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git checkout -B build-log-branch
+        git add -f build.log
+        git commit -m "chore: save build log" || true
+        git push -f origin build-log-branch || true
 
     - name: Release APK
       uses: softprops/action-gh-release@v2
-      if: startsWith(github.ref, 'refs/heads/main')
+      if: success() && startsWith(github.ref, 'refs/heads/main')
       with:
         tag_name: v1.0.0-droid
         name: DroidOperator v1.0.0
