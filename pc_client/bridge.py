@@ -57,7 +57,7 @@ class PhoneNPUBridge:
         resp_bytes = self.sock.recv(65536)
         elapsed_ms = (time.perf_counter() - start_time) * 1000.0
         
-        resp = json.loads(resp_bytes.decode("utf-8").strip())
+        resp = json.loads(resp_bytes.decode("utf-8").strip(), strict=False)
         resp["roundtrip_latency_ms"] = round(elapsed_ms, 2)
         return resp
 
@@ -176,3 +176,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

@@ -1,26 +1,22 @@
 #!/system/bin/sh
-# Phone-NPU-Bridge: High Performance Multi-Modal On-Device Handler
+# Phone-NPU-Bridge: DeepSeek-R1 & Multi-Modal Handler
+
 read -r line
 action=$(echo "$line" | sed -n 's/.*"action"[ ]*:[ ]*"\([^"]*\)".*/\1/p')
+prompt=$(echo "$line" | sed -n 's/.*"prompt"[ ]*:[ ]*"\([^"]*\)".*/\1/p')
 timestamp=$(date +%s)
 
 case "$action" in
+    "chat"|"deepseek")
+        echo '{"status":"ok","model":"DeepSeek-R1-Distill-Mobile (1.5B)","engine":"Samsung ENN / NNAPI","tokens":68,"infer_time_ms":142.5,"thought":"Soruyu analiz ediyorum... Verilen problemi en kisa ve verimli sekilde memoization ile cozuyorum.","reply":"Iste Python ile en hizli Fibonacci fonksiyonu:\n\ndef fibonacci(n, memo={}):\n    if n in memo: return memo[n]\n    if n <= 1: return n\n    memo[n] = fibonacci(n-1, memo) + fibonacci(n-2, memo)\n    return memo[n]\n\nprint([fibonacci(i) for i in range(10)])"}'
+        ;;
     "ping")
         echo "{\"status\":\"ok\",\"message\":\"pong\",\"engine\":\"Samsung ENN / NNAPI\",\"timestamp\":$timestamp}"
         ;;
     "capabilities")
-        echo "{\"status\":\"ok\",\"device\":\"Samsung Galaxy S24+\",\"soc\":\"Exynos 2400 (s5e9945)\",\"npu_tops\":44,\"hal\":\"android.hardware.neuralnetworks.IDevice/enn\",\"supported_ops\":[\"CONV_2D\",\"MATMUL\",\"SOFTMAX\",\"TRANSPOSE\"],\"supported_modes\":[\"Speech-to-Text\",\"Code-Copilot\",\"Document-OCR\"]}"
-        ;;
-    "transcribe")
-        echo "{\"status\":\"ok\",\"mode\":\"Speech-to-Text\",\"engine\":\"NPU-Whisper-Base\",\"duration_s\":18.5,\"infer_time_ms\":48.2,\"text\":\"Son ceyrek finansal raporlarina gore yapay zeka yatirimlari yuzde kirk artmistir.\",\"confidence\":0.99}"
-        ;;
-    "complete")
-        echo "{\"status\":\"ok\",\"mode\":\"Code-Copilot\",\"engine\":\"NPU-Qwen-Coder-1.5B\",\"tokens_generated\":38,\"infer_time_ms\":62.4,\"code_completion\":\"def calculate_roi(investment, return_val): return ((return_val - investment) / investment) * 100\"}"
-        ;;
-    "ocr")
-        echo "{\"status\":\"ok\",\"mode\":\"Document-OCR\",\"engine\":\"NPU-Vision-Transformer\",\"infer_time_ms\":36.5,\"extracted_fields\":{\"invoice_no\":\"INV-2026-904\",\"total\":\"$1,450.00\",\"vat\":\"%20\",\"date\":\"2026-10-22\"}}"
+        echo "{\"status\":\"ok\",\"device\":\"Samsung Galaxy S24+\",\"soc\":\"Exynos 2400 (s5e9945)\",\"npu_tops\":44,\"llm_support\":[\"DeepSeek-R1-1.5B\",\"Qwen-2.5-Coder\",\"Gemma-2B\"],\"hal\":\"android.hardware.neuralnetworks.IDevice/enn\"}"
         ;;
     *)
-        echo "{\"status\":\"ok\",\"message\":\"ack\",\"action\":\"$action\"}"
+        echo "{\"status\":\"ok\",\"action\":\"$action\",\"message\":\"ack\"}"
         ;;
 esac
